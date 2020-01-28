@@ -5,16 +5,13 @@
 	<body style="margin : 0px; overflow: hidden;">
 		<a-scene embedded arjs>
 			<a-assets>
-				<a-asset-item
-					id="deer-obj"
-					src="https://rawcdn.githack.com/longmaba/temp-hosting/3f9a8f21335c9e34261da6baf21d48cf18f967c6/deer.obj"
-				></a-asset-item>
+				<img id="darth-vader" src="https://upload.wikimedia.org/wikipedia/vi/thumb/7/76/Darth_Vader.jpg/220px-Darth_Vader.jpg" />
 			</a-assets>
 			<a-marker
 				type="pattern"
 				url="https://rawcdn.githack.com/longmaba/temp-hosting/0d2cf2c9d23370c03786dc3f5d46deeaf8c25e90/pattern-qrcode.patt.txt"
 			>
-				<a-entity obj-model="obj: #deer-obj"></a-entity>
+				<a-image src="#darth-vader"></a-image>
 				<a-text value="THIS MESSAGE CAN BE CUSTOMIZED"></a-text>
 			</a-marker>
 			<a-entity camera></a-entity>
