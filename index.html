@@ -1,14 +1,23 @@
-<!doctype HTML>
+<!DOCTYPE html>
 <html>
-<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-<script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
-  <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
-      <a-marker type="pattern" url="">
-          <a-image src="https://images-na.ssl-images-amazon.com/images/I/71q98aXxhJL._AC_UX679_.jpg"></a-image>
-        <a-text value="Hello, World!"></a-text>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+	<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+	<script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+	<body style="margin : 0px; overflow: hidden;">
+		<a-scene embedded arjs>
+			<a-assets>
+				<a-asset-item
+					id="deer-obj"
+					src="https://rawcdn.githack.com/longmaba/temp-hosting/3f9a8f21335c9e34261da6baf21d48cf18f967c6/deer.obj"
+				></a-asset-item>
+			</a-assets>
+			<a-marker
+				type="pattern"
+				url="https://rawcdn.githack.com/longmaba/temp-hosting/3c95ddec04c66578c72f96c12a4900e08bdb2864/pattern-qrcode.txt"
+			>
+				<a-entity obj-model="obj: #deer-obj"></a-entity>
+				<a-text value="THIS MESSAGE CAN BE CUSTOMIZED"></a-text>
+			</a-marker>
+			<a-entity camera></a-entity>
+		</a-scene>
+	</body>
 </html>
